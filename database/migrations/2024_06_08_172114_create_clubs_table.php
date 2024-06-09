@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('name', 255)->unique();
             $table->string('short_name', 10);
             $table->string('foundation_year', 4);
-
             $table->foreignId('city_id')->index()->constrained('cities')->onDelete('cascade');
             $table->timestamps();
         });

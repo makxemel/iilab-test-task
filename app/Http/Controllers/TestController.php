@@ -15,7 +15,7 @@ class TestController extends Controller
 {
     public function __invoke()
     {
-        $i = Player::find(1);
-        dd($i->club->games);
+        $i = City::find(1);
+        dd($i->players);
     }
 }

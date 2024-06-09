@@ -16,7 +16,6 @@ return new class extends Migration
             $table->unsignedTinyInteger('club1_score')->nullable();
             $table->unsignedTinyInteger('club2_score')->nullable();
             $table->date('date');
-
             $table->foreignId('club1_id')->index()->constrained('clubs')->onDelete('cascade');
             $table->foreignId('club2_id')->index()->constrained('clubs')->onDelete('cascade');
             $table->timestamps();

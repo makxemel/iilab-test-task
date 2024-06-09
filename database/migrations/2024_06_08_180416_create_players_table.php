@@ -19,7 +19,6 @@ return new class extends Migration
             $table->date('birth_date');
             $table->string('photo')->nullable();
             $table->unsignedTinyInteger('raiting')->nullable();
-
             $table->foreignId('position_id')->index()->constrained('positions')->onDelete('cascade');
             $table->foreignId('club_id')->index()->constrained('clubs')->onDelete('cascade');
             $table->foreignId('country_id')->index()->constrained('cities')->onDelete('cascade');
